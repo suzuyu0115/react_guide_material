@@ -30,7 +30,10 @@ const Example = () => {
       <input type="text" value={filterVal} onChange={(e) => setFilterVal(e.target.value)} />
       <ul>
         {persons
-          .filter(person => person.name.indexOf(filterVal) !== -1)
+          .filter(person => {
+            const isMatch = person.name.indexOf(filterVal) !== -1;
+            return isMatch;
+          })
           .map((person) => (
           <li key={person.name}>
             <Profile {...person} />
