@@ -14,9 +14,9 @@ import Modal from "./components/Modal";
 モーダル、ポップアップ、トーストは使用の代表例です。
 */
 const ModalPortal = ({ children }) => {
-  const target = document.querySelector('.container .start');
-  return createPortal(children, target)
-}
+  const target = document.querySelector(".container.start");
+  return createPortal(children, target);
+};
 const Example = () => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
