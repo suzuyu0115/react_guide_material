@@ -9,7 +9,11 @@ const Example = () => {
       setTime(prev => prev + 1);
     }, 1000);
   }, [])
-  
+
+  useEffect(() => {
+    document.title = 'counter:' + time;
+  }, [])
+
   return (
     <h3>
       <time>{time}</time>
