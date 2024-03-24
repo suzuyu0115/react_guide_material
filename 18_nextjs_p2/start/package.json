@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "json-server": "json-server -w ./mock/db.json -p 4030"
   },
   "dependencies": {
     "next": "12.2.3",

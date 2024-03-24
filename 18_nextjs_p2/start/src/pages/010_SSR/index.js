@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 
-export default function SSR({ message }) {
+// export default function SSR({ message }) {
+export default function SSR() {
   console.log('hello')
-  console.log(message)
+  // console.log(message)
   useEffect(() => {
     console.log('useEffect')
     window.localStorage.setItem('key', 'value')
@@ -13,16 +14,16 @@ export default function SSR({ message }) {
   return <h3>{state}</h3>
 }
 
-export async function getServerSideProps(context) {
+// export async function getServerSideProps(context) {
 
-  const { cookie } = context.req.headers;
-  console.log('cookie', cookie);
+//   const { cookie } = context.req.headers;
+//   console.log('cookie', cookie);
 
-  return {
-    // redirect: {
-    //   destination: '/',
-    //   parmanent: false
-    // },
-    props: { message: 'From Server Side Props' }
-  }
-}
+//   return {
+//     // redirect: {
+//     //   destination: '/',
+//     //   parmanent: false
+//     // },
+//     props: { message: 'From Server Side Props' }
+//   }
+// }
