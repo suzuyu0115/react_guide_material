@@ -1,10 +1,8 @@
-import axios from "axios";
-const JSON_SERVER_URL = `${process.env.JSON_SERVER_URL}/articles`;
+import axios from 'axios'
 
-// リクエストURL
-// http://localhost:4010/api/articles
+const JSON_SERVER_URL = 'http://localhost:4030/articles';
+// http://localhost:3000/api/articles
 export default async function handler(req, res) {
-
   try {
     if(req.method === "GET") {
       const result = await axios.get(JSON_SERVER_URL).then(res => res.data);
@@ -16,7 +14,7 @@ export default async function handler(req, res) {
     error: {
       status: 500,
       code: "BAD_REQUEST",
-      message: "不正なリクエストです。"
+      message:"不正なリクエストです。"
     }
   })
 }
